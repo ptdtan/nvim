@@ -24,7 +24,7 @@ set laststatus=2
 set scrolloff=10
 set expandtab
 "let loaded_matchparen = 1
-set shell=fish
+set shell=bash
 set backupskip=/tmp/*,/private/tmp/*
 
 " incremental substitution (neovim)
@@ -139,11 +139,9 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
   " Use NeoSolarized
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
-  "colorscheme NeoSolarized
-  colorscheme tokyonight
-
+  "let g:neosolarized_termtrans=1
+  "runtime ./colors/NeoSolarized.vim
+  "colorscheme gruvbox
 endif
 
 
@@ -154,3 +152,10 @@ set exrc
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:
+
+if exists("g:loaded_webdevicons")
+	call webdevicons#refresh()
+endif
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
