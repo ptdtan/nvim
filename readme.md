@@ -1,0 +1,3 @@
+# dependencies
+- terraform
+- terraform-ls
