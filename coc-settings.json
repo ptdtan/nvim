@@ -1,3 +1,15 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "typescript", "javascript"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "typescript", "javascript"],
+  "languageserver": {
+		"terraform": {
+			"command": "terraform-ls",
+			"args": ["serve"],
+			"filetypes": [
+				"terraform",
+				"tf"
+			],
+			"initializationOptions": {},
+			"settings": {}
+		}
+	}
 }
