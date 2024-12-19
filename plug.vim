@@ -10,10 +10,12 @@ Plug 'tpope/vim-rhubarb'
 if has("nvim")
   " for searching in files and seach files
   Plug 'junegunn/fzf.vim'
+  Plug 'preservim/tagbar'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
   " gitsigns
   Plug 'lewis6991/gitsigns.nvim'
+  Plug 'rebelot/kanagawa.nvim'
 
   "Plug 'neovim/nvim-lspconfig'
   "Plug 'williamboman/nvim-lsp-installer'

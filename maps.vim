@@ -78,3 +78,6 @@ set relativenumber
 
 " Clipboard
 set clipboard+=unnamedplus
+
+nmap tt :TagbarToggle<CR>
+nmap <Leader>t :NERDTree<CR>

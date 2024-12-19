@@ -28,13 +28,13 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   -- buf_set_keymap('n', 'gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 
-  -- formatting
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-    vim.api.nvim_command [[augroup END]]
-  end
+  ---- formatting
+  --if client.server_capabilities.documentFormattingProvider then
+  --  vim.api.nvim_command [[augroup Format]]
+  --  vim.api.nvim_command [[autocmd! * <buffer>]]
+  --  vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+  --  vim.api.nvim_command [[augroup END]]
+  --end
 
   --protocol.SymbolKind = { }
   protocol.CompletionItemKind = {
@@ -120,28 +120,28 @@ nvim_lsp.diagnosticls.setup {
       typescript = 'eslint',
       typescriptreact = 'eslint',
     },
-    formatters = {
-      eslint_d = {
-        command = 'eslint_d',
-        rootPatterns = { '.git' },
-        args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
-        rootPatterns = { '.git' },
-      },
-      prettier = {
-        command = 'prettier_d_slim',
-        rootPatterns = { '.git' },
-        -- requiredFiles: { 'prettier.config.js' },
-        args = { '--stdin', '--stdin-filepath', '%filename' }
-      }
-    },
+    --formatters = {
+    --  eslint_d = {
+    --    command = 'eslint_d',
+    --    rootPatterns = { '.git' },
+    --    args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
+    --    rootPatterns = { '.git' },
+    --  },
+    --  prettier = {
+    --    command = 'prettier_d_slim',
+    --    rootPatterns = { '.git' },
+    --    -- requiredFiles: { 'prettier.config.js' },
+    --    args = { '--stdin', '--stdin-filepath', '%filename' }
+    --  }
+    --},
     formatFiletypes = {
       css = 'prettier',
-      javascript = 'prettier',
-      javascriptreact = 'prettier',
+      --javascript = 'prettier',
+      --javascriptreact = 'prettier',
       json = 'prettier',
       scss = 'prettier',
       less = 'prettier',
-      typescript = 'prettier',
+      --typescript = 'prettier',
       typescriptreact = 'prettier',
       json = 'prettier',
     }

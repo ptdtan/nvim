@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "typescript", "javascript"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"],
   "languageserver": {
 		"terraform": {
 			"command": "terraform-ls",
