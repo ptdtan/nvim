@@ -32,7 +32,7 @@ if has("nvim")
   Plug 'ryanoasis/vim-devicons'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'stevearc/aerial.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-treesitter/nvim-treesitter',  {'branch': 'master'}
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
